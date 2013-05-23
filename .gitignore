@@ -1,0 +1,15 @@
+# Ignore the build folder
+example.build/
+
+# Ignore the docs folder
+.docs/
+
+# Ignore Jungle IDE files
+example.jungle*
+example.jiproj*
+
+# Ignore thumbs
+Thumbs.db
+
+# Ignore compiled APKs
+*.apk
