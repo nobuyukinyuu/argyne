@@ -12,8 +12,10 @@ Class Game Extends App
 	Field f:= New SolidParticleFactory(128, 0, 255, 255, 16, 128)
 	Field e:ParticleEmitter
 	
+	Field burst:Int  'Burst counter
+	
 	Method OnCreate:Int()
-		SetUpdateRate 60
+		SetUpdateRate 70
 				
 		'Set up the emitter
 		e = New ParticleEmitter(f, 5000, 1)
@@ -30,7 +32,15 @@ Class Game Extends App
 			p.Emitters.Push(ep)  'Add the emitter clone to the manager's emitter stack.
 		End If
 
-
+		If burst > 0
+			e.SetPosition(Rnd(DeviceWidth), Rnd(DeviceHeight))  'Set the emitter prototype's position.	
+			Local ep:= ParticleEmitter(e.Clone())  'Emitter clone
+			ep.Emit()  'Force an emission.
+			p.Emitters.Push(ep)  'Add the emitter clone to the manager's emitter stack.
+			burst -= 1
+		End If
+		If KeyHit(KEY_SPACE) Then burst += 5
+		
 		If KeyHit(KEY_ESCAPE) or KeyHit(KEY_CLOSE) Then Error("")
 	End Method
 	
