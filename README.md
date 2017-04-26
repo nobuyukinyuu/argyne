@@ -4,7 +4,7 @@ Superemitter particle system for Monkey.  Possibly undergoing a re-write in the 
 
 ![](http://i.imgur.com/hhiQ6nI.png)
 
-###Features
+### Features
 * A "Super-emitter" interface-based design - All valid particles implement Particle, including emitters, which means that emitters act as particles, and can recursively spawn other emitters as if they were particles, as well.
 * Linear tween capability of all base properties - As an interface requirement of Particle, there exist 3 copies of a base properties container -- The Current of which is automatically tweened on update between the first and last values. adding more properties is simple; all tools are exposed in the ParticleValues class.
 * Frame-based iteration values exist as default ParticleValues, including delta-spin, delta-xy, and gravity. This is in addition to the delta-time based values of location, angle, scale, and alpha. These values iterate based on how many estimated frames have elapsed since the last update, providing flexibility to coders who prefer frame-time animation. These values can also be automatically tweened over the life of the particle.
@@ -13,7 +13,7 @@ Superemitter particle system for Monkey.  Possibly undergoing a re-write in the 
 * Some basic all-purpose particles are included with the module to get you started.
 
 
-###Coming Soon
+### Coming Soon
 * Curve easing for tweens
 * Delay value in addition to ttl. Automatically delays the start of the behavior of a Particle until after the delay has passed.
 * Some sort of animated particle class to the basic all-purposes included classes
@@ -21,7 +21,7 @@ Superemitter particle system for Monkey.  Possibly undergoing a re-write in the 
 * Resource pooling using brl.pool for optimal memory management.
 
 
-###Donate
+### Donate
 If you like this project, please consider giving a small donation to support further development.
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RHZMPB4RL3T82&lc=US&item_name=Nobu%27s%20Monkey%2dX%20projects&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
